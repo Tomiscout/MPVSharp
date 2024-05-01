@@ -148,7 +148,7 @@ public class Client : MPVClient, IDisposable
     {
         while (!_disposed && !_isDisposing)
         {
-            var clientEvent = WaitEvent(0);
+            var clientEvent = WaitEvent(-1);
             switch (clientEvent.Id)
             {
                 case MPVEventId.Shutdown:
